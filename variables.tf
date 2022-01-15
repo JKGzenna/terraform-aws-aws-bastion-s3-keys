@@ -1,11 +1,11 @@
 variable "allowed_cidr" {
-  type        = list(string)
+  type        = "list"(string)
   default     = ["0.0.0.0/0"]
   description = "A list of CIDR Networks to allow ssh access to."
 }
 
 variable "allowed_security_groups" {
-  type        = list(string)
+  type        = "list"(string)
   default     = []
   description = "A list of Security Group ID's to allow access to."
 }
@@ -59,7 +59,7 @@ variable "s3_bucket_name" {
 }
 
 variable "subnet_ids" {
-  type        = list(string)
+  type        = "list"(string)
   description = "Subnet ID's use to place the bastion instance"
 }
 
