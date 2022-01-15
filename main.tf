@@ -106,7 +106,7 @@ resource "aws_iam_role_policy" "bastion" {
 }
 
 module "bastion" {
-  source                      = "git@github.com:asicsdigital/terraform-aws-bastion-s3-keys.git?ref=v3.0.0"
+  source                      = "https://github.com/asicsdigital/terraform-aws-bastion-s3-keys.git?ref=v3.0.0"
   name                        = "${var.hostname}.${data.aws_route53_zone.zone.name}"
   ssh_user                    = "ec2-user"
   instance_type               = "t2.micro"
